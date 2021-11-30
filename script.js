@@ -110,8 +110,8 @@ function scanBtn(e) {
   if (e.target.innerHTML === "%") {
     if (parseInt(number) % 1 === 0) {
       display.value =
-        display.value.substring(0, display.value.length - 1) +
-        parseFloat(number / 100).toString();
+        display.value.substring(0, display.value.length - number.length) +
+        parseFloat(number / 100);
       number = "";
     }
   }
