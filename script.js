@@ -101,9 +101,11 @@ function scanBtn(e) {
   }
   if (e.target.innerHTML === "+/-") {
     if (number > 0) {
-      number = number * -1;
+      number = "-" + number.toString();
       display.value =
-        display.value.substring(0, display.value.length - 1) + number;
+        display.value.substring(0, display.value.length - number.length + 1) +
+        `${number}`;
+      number = "";
     }
   }
 
